@@ -1,0 +1,18 @@
+<form action="/process" method="POST" enctype="multipart/form-data">
+    <label for="watermark_scale">Watermark Scale:</label>
+    <input type="text" id="watermark_scale" name="watermark_scale" required><br><br>
+    
+    <label for="watermark_x">Watermark X-coordinate:</label>
+    <input type="text" id="watermark_x" name="watermark_x" required><br><br>
+    
+    <label for="watermark_y">Watermark Y-coordinate:</label>
+    <input type="text" id="watermark_y" name="watermark_y" required><br><br>
+    
+    <label for="image">Select Image(s):</label>
+    <input type="file" id="image" name="image" accept="image/*" multiple required><br><br>
+    
+    <label for="watermarks">Select Watermark(s):</label>
+    <input type="file" id="watermarks" name="watermarks" accept="image/*" multiple required><br><br>
+    
+    <button type="submit">Apply Watermark</button>
+</form>
