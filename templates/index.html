@@ -1,19 +1,40 @@
-<form action="/process" method="POST" enctype="multipart/form-data">
-    <label for="watermark_scale">Watermark Scale:</label>
-    <input type="text" id="watermark_scale" name="watermark_scale" required><br><br>
-    
-    <label for="watermark_x">Watermark X-coordinate:</label>
-    <input type="text" id="watermark_x" name="watermark_x" required><br><br>
-    
-    <label for="watermark_y">Watermark Y-coordinate:</label>
-    <input type="text" id="watermark_y" name="watermark_y" required><br><br>
-    
-    <label for="image">Select Image(s):</label>
-    <input type="file" id="image" name="image" accept="image/*" multiple required><br><br>
-    
-    <label for="watermarks">Select Watermark(s):</label>
-    <input type="file" id="watermarks" name="watermarks" accept="image/*" multiple required><br><br>
-       <input type="hidden" name="download_format" value="zip">
-    
-    <button type="submit">Apply Watermark</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Watermarking Tool</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="mb-4">Image Watermarking Tool</h1>
+    <form action="/process" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="watermark_scale">Watermark Scale:</label>
+            <input type="text" class="form-control" id="watermark_scale" name="watermark_scale" required>
+        </div>
+        <div class="form-group">
+            <label for="watermark_x">Watermark X-coordinate:</label>
+            <input type="text" class="form-control" id="watermark_x" name="watermark_x" required>
+        </div>
+        <div class="form-group">
+            <label for="watermark_y">Watermark Y-coordinate:</label>
+            <input type="text" class="form-control" id="watermark_y" name="watermark_y" required>
+        </div>
+        <div class="form-group">
+            <label for="image">Select Image(s):</label>
+            <input type="file" class="form-control-file" id="image" name="image" accept="image/*" multiple required>
+        </div>
+        <div class="form-group">
+            <label for="watermarks">Select Watermark(s):</label>
+            <input type="file" class="form-control-file" id="watermarks" name="watermarks" accept="image/*" multiple required>
+        </div>
+        <input type="hidden" name="download_format" value="zip">
+        <button type="submit" class="btn btn-primary">Apply Watermark</button>
+    </form>
+</div>
+
+</body>
+</html>
